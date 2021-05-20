@@ -1,21 +1,20 @@
 import React, { useState, Fragment } from 'react';
+import EmailModal from './EmailModal.jsx';
 
-const Representatives = ({ representatives }) => {
+const Representatives = ({ representatives, name }) => {
 
-  const [show, setShow] = useState(false);
-
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-
+  const [officialName, setOfficialName] = useState(undefined);
 
   return (
 
-      <React.Fragment className="officials">
+      <React.Fragment>
+        <div className="officials">
       {representatives.officials.map((official, index) => (
-        <div className="official">
+        <div className="official" key={index}>
           <div className="officialHeader">
           <h2 className="officialName">{official.name}</h2>
             <p className="officialParty">{official.party}</p>
+            <p className="officialOffice">{representatives.offices[index].name}</p>
           </div>
           {official.address && (
             <div className="officialAddress">
@@ -40,7 +39,7 @@ const Representatives = ({ representatives }) => {
             <div>
               <h3>Social-Media</h3>
             {official.channels.map((channel, index) => (
-              <div>
+              <div key={index}>
               <p>
                 {`${channel.type}.com/${channel.id}`}
               </p>
@@ -49,15 +48,17 @@ const Representatives = ({ representatives }) => {
             </div>
           ) : (
             null
-          )}
+            )}
             <div className="officialEmail">
               <h3>E-Mail</h3>
               <ul>
-                <p onClick={handleShow}>{official.emails[0]}</p>
+                <button className="closeButton" onClick={()=>setOfficialName(official.name)}>{official.emails[0]}</button>
               </ul>
             </div>
+            <EmailModal officialName={officialName} name={name}/>
         </div>
       ))}
+      </div>
       </React.Fragment>
 
   )

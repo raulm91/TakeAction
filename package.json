@@ -33,7 +33,6 @@
     "npm": "^7.13.0",
     "path": "^0.12.7",
     "react": "^17.0.2",
-    "react-bootstrap": "^1.6.0",
     "react-dom": "^17.0.2",
     "webpack": "^5.37.0",
     "webpack-cli": "^4.7.0",

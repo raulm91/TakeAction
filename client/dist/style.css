@@ -8,7 +8,6 @@ body {
 
 .homepage {
   align-content: space-between;
-  margin-left: 175px;
 }
 
 img {
@@ -18,7 +17,7 @@ img {
 .cityscape {
   border-bottom-style: solid;
   border-bottom-color: #ffca27;
-  border-bottom-width: 10px;
+  border-bottom-width: 8px;
 }
 
 h1 {
@@ -112,16 +111,16 @@ h1 {
 }
 .form-style-7 input[type="submit"],
 .form-style-7 input[type="button"]{
-	background: #797f8a;
+	background: #ffca27;
 	border: none;
 	padding: 10px 20px 10px 20px;
 	border-bottom: 3px solid #797f8a;
 	border-radius: 3px;
-	color: #D2E2FF;
+	color: black;
 }
 .form-style-7 input[type="submit"]:hover,
 .form-style-7 input[type="button"]:hover{
-	background: #ffca27;
+	background: #797f8a;
 	color:#fff;
 }
 
@@ -153,6 +152,7 @@ div.official {
 }
 
 div.official {
+  height: auto;
   border-top-style: solid;
   border-right-style: solid;
   border-left-style: solid;
@@ -167,6 +167,7 @@ div.official {
   margin-right: 5px;
   margin-bottom: 10px;
   text-align: center;
+  max-height: 685px;
 }
 
 p.officialParty {
@@ -187,4 +188,76 @@ p.officialParty {
   color: white;
   padding-top: 20px;
 }
+
+.officialOffice {
+  padding-bottom: 15px;
+}
+
+.modal {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+}
+
+.modal-content {
+  width: 600px;
+  background-color: #fff;
+}
+
+.modal-header, .modal-footer {
+  padding: 10px;
+}
+
+.modalFooter {
+  display: flex;
+  justify-content: center;
+}
+
+.closeButton {
+  background-color: white;
+  border-style: solid;
+  border-radius: 3px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-color: black;
+  font-family: 'Raleway', sans-serif;
+}
+
+.header {
+  margin-top: 20px;
+}
+
+.modal-title {
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+}
+
+.modal-body {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top: 1px solid #ffca27;
+  border-bottom: 1px solid #ffca27;
+}
+
+.modalButton {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: auto;
+  left: 700px;
+  top: 590px;
+}
+
+
 
